@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">Numbers</string>
-    <string name="calc_name">Calculator</string>
-    <string name="calc_hint">enter exapmle</string>
+    <string name="calc_name">Калькулятор</string>
+    <string name="calc_hint">Введите пример</string>
+    <string name="talk_he">Мужской род</string>
+    <string name="talk_she">Женский род</string>
+    <string name="talk_it">Средний род</string>
+    <string name="talk_IM">Именительный падеж</string>
+    <string name="talk_RO">Родительный падеж</string>
+    <string name="talk_DA">Дательный падеж</string>
+    <string name="talk_TV">Творительный падеж</string>
+    <string name="talk_PR">Предложный падеж</string>
+    <string name="talk_hint">Введите число</string>
+    <string name="talk_action">Сгенерировать</string>
+    <string name="talk_name">Числительные</string>
 </resources>

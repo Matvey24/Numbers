@@ -1,13 +1,8 @@
 package com.perelman.numbers;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.autofill.AutofillValue;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -29,12 +24,9 @@ public class CalcActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calc);
         ButterKnife.bind(this);
-        calc = new CalculatorAPI((d)-> {
-            tv.setText(String.format("%s", d));
-        });
+        calc = new CalculatorAPI((d)-> tv.setText(String.format("%s", d)));
         et.setOnClickListener((v)-> calc.count(et.getText().toString()));
     }
-
     @Override
     protected void onDestroy() {
         calc.dispose();

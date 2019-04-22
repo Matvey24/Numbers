@@ -9,17 +9,28 @@ import android.widget.Button;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
-    public Button btn_calc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn_calc = findViewById(R.id.btn_calc);
-        btn_calc.setOnClickListener((v)->{
-            Intent intent = new Intent(MainActivity.this, CalcActivity.class);
-            startActivity(intent);
-        });
+        ButterKnife.bind(this);
+    }
+    @OnClick({R.id.btn_calc, R.id.btn_talk})
+    public void onClick(Button b){
+        Intent intent = new Intent();
+        switch (b.getId()){
+            case R.id.btn_calc:
+                intent.setClass(this, CalcActivity.class);
+                break;
+            case R.id.btn_talk:
+                intent.setClass(this, TalkerActivity.class);
+                break;
+            default:
+                return;
+        }
+        startActivity(intent);
     }
 }

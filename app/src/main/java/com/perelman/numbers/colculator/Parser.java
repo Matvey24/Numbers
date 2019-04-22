@@ -118,7 +118,7 @@ public class Parser {
         elements.push(last);
         while (!stack.empty()) {
             Element element = stack.pop();
-            if (closeBracket(element) && (openBracket(last) || startFunc(last) || element.type == NUMBER || constant(element)) ||
+            if (closeBracket(element) && (openBracket(last) || startFunc(last) || last.type == NUMBER || constant(last)) ||
                     element.type == NUMBER && (constant(last) || startFunc(last) || openBracket(last)) ||
                     constant(element) && (openBracket(last) || constant(last) || startFunc(last) || last.type == NUMBER)) {
                 elements.push(new Element("*", SIGN));
