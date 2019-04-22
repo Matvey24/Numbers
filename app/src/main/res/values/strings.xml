@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Numbers</string>
+    <string name="calc_name">Calculator</string>
+    <string name="calc_hint">enter exapmle</string>
+</resources>
