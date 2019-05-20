@@ -3,6 +3,7 @@ package com.perelman.numbers;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -11,14 +12,13 @@ import com.perelman.numbers.talker.Decl;
 import com.perelman.numbers.talker.Genus;
 import com.perelman.numbers.talker.NumberTalker;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.BindView;
 import butterknife.OnClick;
+import butterknife.OnTextChanged;
 
 import static com.perelman.numbers.talker.Decl.*;
-import static com.perelman.numbers.talker.Genus.HE;
-import static com.perelman.numbers.talker.Genus.IT;
-import static com.perelman.numbers.talker.Genus.SHE;
+import static com.perelman.numbers.talker.Genus.*;
 
 public class TalkerActivity extends AppCompatActivity {
     @BindView(R.id.talk_group_decl)
@@ -37,7 +37,9 @@ public class TalkerActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         nt = new NumberTalker();
     }
-    @OnClick(R.id.talk_btn_generate)
+    @OnTextChanged(R.id.talk_et)
+    @OnClick({R.id.talk_decl_im, R.id.talk_decl_ro, R.id.talk_decl_da,  R.id.talk_decl_tv, R.id.talk_decl_pr,
+                        R.id.talk_gen_he, R.id.talk_gen_she, R.id.talk_gen_it})
     public void generate(){
         Decl d;
         switch (groupDecl.getCheckedRadioButtonId()){

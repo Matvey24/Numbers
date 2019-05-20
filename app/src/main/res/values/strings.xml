@@ -13,4 +13,9 @@
     <string name="talk_hint">Введите число</string>
     <string name="talk_action">Сгенерировать</string>
     <string name="talk_name">Числительные</string>
+    <string name="calc_set_nums">Числа</string>
+    <string name="calc_set_bools">Логика</string>
+    <string name="calc_plot">Тестировать</string>
+    <string name="calc_set_complex">Комплексные числа</string>
+    <string name="calc_calculate">Посчитать</string>
 </resources>
